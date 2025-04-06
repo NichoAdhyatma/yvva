@@ -1,5 +1,5 @@
 import { createApp } from "vue";
 import "./style.css";
-import Score from "./components/Score.vue";
+import TodoList from "./components/TodoList.vue";
 
-createApp(Score).mount("#app");
+createApp(TodoList).mount("#app");
