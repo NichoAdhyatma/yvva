@@ -5,6 +5,8 @@ import { ref } from 'vue';
 const score = ref<number>(0)
 
 const changeScore = (value: number) => {
+    console.log('changeScore is called')
+
     score.value = value
 }
 
@@ -15,6 +17,8 @@ const classScore = ref({
 })
 
 const changeClass = (value: number) => {
+    console.log('changeClass is called')
+
     classScore.value = {
         cool: value === 100,
         good: value === 50,
@@ -33,13 +37,20 @@ const changeClass = (value: number) => {
     <p v-if="score === 0">❌</p>
 
     <div>
-        <button @click="() => {changeScore(100) 
-            changeClass(100)}">cool score</button>
-        <button @click="() => {changeScore(50)
+        <button @click="() => {
+            changeScore(100) 
+            changeClass(100)
+            }">cool score</button>
+            
+        <button @click="() => {
+            changeScore(50)
             changeClass(50)
         }">good score</button>
-        <button @click="() => {changeScore(0) ;
-            changeClass(0)}">bad score</button>
+
+        <button @click="() => {
+            changeScore(0)
+            changeClass(0)
+        }">bad score</button>
     </div>
 </template>
 

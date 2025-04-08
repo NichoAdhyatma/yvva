@@ -26,6 +26,7 @@ const count = ref(0)
 
 const increment = () => {
     console.log('increment is called')
+    
     count.value++
 }
 
