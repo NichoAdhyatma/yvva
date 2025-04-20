@@ -1,5 +1,5 @@
 import { createApp } from "vue";
 import "./style.css";
-import Score from "./components/Score.vue";
+import ContactUs from "./components/ContactUs.vue";
 
-createApp(Score).mount("#app");
+createApp(ContactUs).mount("#app");
