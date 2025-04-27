@@ -12,7 +12,7 @@ const handleInput = (event: Event) => {
 
     data[input.name as keyof typeof data] = input.value
 
-    console.log(data)
+    console.log('data is', data)
 }
 
 

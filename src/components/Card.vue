@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { ref, useSlots } from 'vue';
+import { ref, } from 'vue';
 
-    const slots = useSlots()
 
     const counter = ref(0)
 </script>
 <template>
     <div class="card">
-        <div v-if="slots.header">
+        <div v-if="$slots.header">
             <slot name="header" :counter="counter" />
         </div>
       
-        <div v-if="slots.content" class="card-content">
+        <div v-if="$slots.content" class="card-content">
             <slot name="content" :counter="counter"/>
         </div>
 
